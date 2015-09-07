@@ -1,0 +1,14 @@
+# Site settings
+title: capawaky.com - Home
+email: your-email@domain.com
+description: > # this means to ignore newlines until "baseurl:"
+  Personal website and blog of Carlos Kynäslahti
+baseurl: "" # the subpath of your site, e.g. /blog/
+url: "http://capawaky.com" # the base hostname & protocol for your site
+paginate: 1
+#excerpt: 2
+
+
+# Build settings
+markdown: kramdown
+

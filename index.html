@@ -1,0 +1,26 @@
+---
+layout: default
+---
+
+
+
+
+{% for post in site.posts limit:5 %}
+  <span class="post_date"> {{ post.date | date_to_string }}</span>
+ 
+  <a class="main_post_title" href="{{ BASE_PATH }}{{ post.url }}">
+  {{ post.title }}</a>
+
+
+  
+
+  <span class="post_content">{{post.content | split: '<!-- more -->' | first }}</span>
+
+ 
+<!--<a class="read-more" href="{{ BASE_PATH }}{{ post.url }}">
+Read more...</a>-->
+
+{% endfor %}
+
+
+

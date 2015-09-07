@@ -1,0 +1,16 @@
+---
+layout: default
+title: Posts - capawaky.com
+---
+
+<ul class="post-list">
+  {% for post in site.posts %}
+    <li>
+      <span class="post_date">{{ post.date | date_to_string }} </span>
+
+     
+        <a class="main_post_title" href="{{ post.url | prepend: site.baseurl }}"> {{ post.title }}</a>
+      <span class="post_content">{{ post.excerpt }}</span>
+      <a class="read-more" href="{{ BASE_PATH }}{{ post.url }}">Read more...</a>
+    </li>
+  {% endfor %}
