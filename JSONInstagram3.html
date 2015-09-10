@@ -20,7 +20,7 @@ $(document).ready(function(){
     {
         instagram = '<li>';
         instagram += '<a href="'+ item.link +'" target="_blank">';
-        instagram += '<div class="imag3" style="background-image: url('+item.images.low_resolution.url+');">';
+        instagram += '<div class="imag3" style="background-image: url("+item.images.low_resolution.url+");">';
         instagram += '</div></a>';
         instagram += '</li>';
 
