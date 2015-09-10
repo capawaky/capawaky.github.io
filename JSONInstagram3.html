@@ -9,31 +9,31 @@
 $(document).ready(function(){
 	$("button").click(function(){
 		var url = "https://api.instagram.com/v1/users/1551735546/media/recent/?access_token=1551735546.4bf074c.c50158944161461cb019d912fa816df9"
-		$.ajax({
-    type: 'GET',
-    url: url,
-    contentType: "application/json",
-    dataType: 'jsonp'
+		var instagramRequest = $.ajax({
+   			type: 'GET',
+   			url: url,
+   			contentType: "application/json",
+    		dataType: 'jsonp'
 })
-		//var flickrAPI = "http://api.flickr.com/services/feeds/photos_public.gne?jsoncallback=?"
-//$.getJSON("https://api.instagram.com/v1/tags/nofilter/media/recent/?client_id=c5f7e81a2e604d82b9b9f0f9534dc269", function (igResults){
-	//		document.write(igResults.tag) });
-		// $.getJSON("https://api.instagram.com/v1/users/1551735546/media/recent/?access_token=1551735546.4bf074c.c50158944161461cb019d912fa816df9", function (igResults){
-			console.log("made it to here")
-			document.write(igResults.tag)
-	//	})
-			/*.done(function( data ){
-				$.each( data.items, function( i, item ){ 
-					$( "<img>").attr("src", item.media.m ).appendTo( "#images" );
-					if ( i == 3 ) {
-						return false;
-					}
-				})
-			}) */
+		.done(function(data){
+    $.each(data.data, function (i, item) 
+    {
+        instagram = '<li>';
+        instagram += '<a href="'+ item.link +'" target="_blank">';
+        instagram += '<div class="imag3" style="background-image: url('+item.images.low_resolution.url +');">';
+        instagram += '</div></a>';
+        instagram += '</li>';
+
+        $('#instagram-cont').append(instagram);
+    });
+});
+
+		
+	
 		});
 	});
     
-//});
+
 </script>
 
 <!-- 	http://www.capawaky.com/#access_token=1551735546.4bf074c.c50158944161461cb019d912fa816df9
@@ -49,5 +49,10 @@ $(document).ready(function(){
 <body>
 <div id="images"></div>
 <button>Get IG tags</button>
+<div id="container">
+    <ul id="instagram-cont">
+        
+    </ul>
+</div>
 </body>
 </html>
