@@ -4,15 +4,15 @@
 	<title>Instagram JSON</title>
 </head>
 
-<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <script>
 $(document).ready(function(){
 	$("button").click(function(){
 		//var flickrAPI = "http://api.flickr.com/services/feeds/photos_public.gne?jsoncallback=?"
-$.getJSON("https://api.instagram.com/v1/tags/nofilter/media/recent/?client_id=c5f7e81a2e604d82b9b9f0f9534dc269", function (igResults){
-			document.write(igResults.tag) });
-		// $.getJSON("https://api.instagram.com/v1/users/1551735546/media/recent/?access_token=1551735546.c5f7e81.83bb6c8eb2fe4fa5bd7d76650d5b5abf", function (igResults){
-			//document.write(igResults.tag)
+//$.getJSON("https://api.instagram.com/v1/tags/nofilter/media/recent/?client_id=c5f7e81a2e604d82b9b9f0f9534dc269", function (igResults){
+	//		document.write(igResults.tag) });
+		 $.getJSON("https://api.instagram.com/v1/users/1551735546/media/recent/?access_token=4bf074c.c50158944161461cb019d912fa816df9", function (igResults){
+			document.write(igResults.tag);
 	//	})
 			/*.done(function( data ){
 				$.each( data.items, function( i, item ){ 
@@ -28,11 +28,15 @@ $.getJSON("https://api.instagram.com/v1/tags/nofilter/media/recent/?client_id=c5
 //});
 </script>
 
-<!-- http://localhost/#access_token=1551735546.c5f7e81.83bb6c8eb2fe4fa5bd7d76650d5b5abf 
+<!-- 	http://www.capawaky.com/#access_token=1551735546.4bf074c.c50158944161461cb019d912fa816df9
+
 		https://api.instagram.com/v1/users/{user-id}/media/recent/?access_token=ACCESS-TOKEN
 		carlospwk user_id 1551735546
+
 		full sized pics: data.standard_resolution - https://instagram.com/developer/endpoints/users/?hl=en
 		COUNT : count of media to return (5)
+
+		
 -->
 <body>
 <div id="images"></div>
