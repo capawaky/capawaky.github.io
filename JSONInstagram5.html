@@ -5,61 +5,49 @@
     <meta charset="utf8">
     <style>
 
-    /* IG List */
+        img {
+            padding: 0px;
+            line-height:0px;
+            margin: 0px;
+            float: left;
+        }
 
-    .imag3{
-        width:300px;
-        height:300px;
-    }
-    ul{
-      list-style:none;  
-    }
+        h1 {
+            text-align: center; 
+            font-family: 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif;
+        }
 
-    /* AIG */
+        div#largePhoto {
+            margin: 0 auto; 
+            height: 600px; 
+            width: 600px;
+        }
 
-                img {
-                    padding: 0px;
-                    line-height:0px;
-                    margin: 0px;
-                    float: left;
-                }
+        div#thumbs {
+            width: 50%; 
+            margin: 0 auto;  
+           height: 150px; 
+            width: 600px;
+        }
 
-                h1 {
-                    text-align: center; 
-                    font-family: 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif;
-                }
+        div#thumbs img {
+            width:150px;
+            height:150px;
+        }
 
-                div#largePhoto {
-                    margin: 0 auto; 
-                    height: 600px; 
-                    width: 600px;
-                }
+        div#imageLoader {
+            display: none;
+        }
 
-                div#thumbs {
-                    width: 50%; 
-                    margin: 0 auto;  
-                   height: 150px; 
-                    width: 600px;
-                }
+        p {
+            font-family: 'Helvetica Neue', 'Lucida Grande'; 
+            font-size: 11px;
+        }
 
-                div#thumbs img {
-                    width:150px;
-                    height:150px;
-                }
-
-                div#imageLoader {
-                    display: none;
-                }
-
-                p {
-                    font-family: 'Helvetica Neue', 'Lucida Grande'; 
-                    font-size: 11px;
-                }
-
-                img#iso{
-                    width:600px;
-                    height:600px;
-                }
+        img#iso{
+            width:600px;
+            height:600px;
+        }
 
     </style>
 </head>
@@ -67,58 +55,33 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <script>
 $(document).ready(function(){
-	//$("button").click(function(){
-		var url = "https://api.instagram.com/v1/users/1551735546/media/recent/?access_token=1551735546.4bf074c.c50158944161461cb019d912fa816df9&count=4"
-		var instagramRequest = $.ajax({
-   			type: 'GET',
-   			url: url,
-   			contentType: "application/json",
-    		dataType: 'jsonp'
+    var url = "https://api.instagram.com/v1/users/1551735546/media/recent/?access_token=1551735546.4bf074c.c50158944161461cb019d912fa816df9&count=4"
+    $.ajax({
+		type: 'GET',
+		url: url,
+		contentType: "application/json",
+		dataType: 'jsonp'
 })
 		.done(function(data){
-           /* $.each(data.data, function (i, item) 
-            {
-                instagram = '<li>';
-                instagram += '<a href="'+ item.link +'" target="_blank">';
-                instagram += '<div class="imag3" style="background-image: url('+item.images.low_resolution.url+');">';
-                instagram += '<p>'+ item.id +'</p>'
-                instagram += '</div></a>';
-                instagram += '</li>';
-                $('#instagram-cont').append(instagram);
-            });*/
-            //$('#instagram-cont').append("<div class='imag3' style='background-image: url("+data.data[0].images.low_resolution.url+");'>");
-            
-
-            $("#iso").attr("src", data.data[0].images.standard_resolution.url ); //put "$thisID" into the array
-
+            $("#iso").attr("src", data.data[0].images.standard_resolution.url ); 
             $("#0").attr("src", data.data[0].images.low_resolution.url );
             $("#1").attr("src", data.data[1].images.low_resolution.url );
             $("#2").attr("src", data.data[2].images.low_resolution.url );
             $("#3").attr("src", data.data[3].images.low_resolution.url );
-       
-       $("#thumbs img").hover(function (){                 
-                    $("#largePhoto img").fadeOut(300);                  
-                    $("#largePhoto img").fadeIn(300);
-                    
-
-
-
-
-                    var savedThis = this;                           
-                    setTimeout(function(){
-                        $("#largePhoto img").attr("src", data.data[$(savedThis).attr("id")].images.standard_resolution.url); //$(savedThis).attr("src").replace("_thumb", "")
-                        }, 300);
+            
+            $("#thumbs img").hover(function (){                 
+                $("#largePhoto img").fadeOut(300);                  
+                $("#largePhoto img").fadeIn(300);
+                var savedThis = this;                           
+                setTimeout(function(){
+                    $("#largePhoto img").attr("src", data.data[$(savedThis).attr("id")].images.standard_resolution.url); 
+                    }, 300);
                 },  function(){
-                    $("#largePhoto img").stop( true, true );
-                    $("#largePhoto img").show();                    
-                    });
-
-        });
-        
+                $("#largePhoto img").stop( true, true );
+                $("#largePhoto img").show();                    
+                });
+        }); 
 	});
-//});
-    
-
 </script>
 
 <body>
@@ -137,12 +100,6 @@ $(document).ready(function(){
         <p> © Carlos Kynäslahti 2015</p>
 
 
-<!--<div id="images"></div>
-<button>Get IG pics</button>
-<div id="container">
-    <ul id="instagram-cont">
-        
-    </ul>
-</div> -->
+
 </body>
 </html>
