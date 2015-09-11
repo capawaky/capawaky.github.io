@@ -17,7 +17,7 @@ ul{
 <script>
 $(document).ready(function(){
 	$("button").click(function(){
-		var url = "https://api.instagram.com/v1/users/1551735546/media/recent/?access_token=1551735546.4bf074c.c50158944161461cb019d912fa816df9"
+		var url = "https://api.instagram.com/v1/users/1551735546/media/recent/?access_token=1551735546.4bf074c.c50158944161461cb019d912fa816df9&count=5"
 		var instagramRequest = $.ajax({
    			type: 'GET',
    			url: url,
@@ -26,16 +26,18 @@ $(document).ready(function(){
 })
 		.done(function(data){
     
-    $.each(data.data.slice(0,5), function (i, item) 
+    $.each(data.data, function (i, item) 
     {
         instagram = '<li>';
         instagram += '<a href="'+ item.link +'" target="_blank">';
         instagram += '<div class="imag3" style="background-image: url('+item.images.low_resolution.url+');">';
+        instagram += '<p>'+ item.id +'</p>'
         instagram += '</div></a>';
         instagram += '</li>';
 
         $('#instagram-cont').append(instagram);
     });
+    $('#instagram-cont').append("<div class='imag3' style='background-image: url("+data.data[0].images.low_resolution.url+");'>");
 });
 
 		
