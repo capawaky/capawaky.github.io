@@ -207,7 +207,7 @@ article.content {
 } 
 
 .post_content {
-	margin: 0px 0px 0px 0px;
+	margin: 0px 0px 50px 0px;
 	padding: 0px;
 	display: block;
 }
@@ -220,6 +220,10 @@ article.content {
 
 .portfolio-example {
 	margin-bottom: 50px;
+}
+
+.AIG {
+	margin: 0px 0px 50px -20px;
 }
 
 //
@@ -238,7 +242,7 @@ h1 {
 }
 
 h2 {
-	 font-size: 25px;
+	 font-size: 30px;
 	 line-height: 30px;
 	 margin: 0px 0px 25px 0px;
 	 font-family: Arvo, 'Helvetica Neue', Helvetica, Arial, sans-serif;
