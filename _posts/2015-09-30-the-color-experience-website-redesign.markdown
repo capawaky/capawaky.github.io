@@ -12,7 +12,7 @@ I no longer have the assignment brief but I remember concentrating on re-structu
 
 I started a YouTube account for the Color Museum to in a way replace the "[multimedia][CMMultimedia]" aspect of the website. Making videos is a relatively easy and cost effective way to add promotable content to your website and is very user friendly.
 
-It was my first time creating a website mockup with Illustrator. For the main theme I picked a rainbow like palette of colors to display on the background. I restructured the information on the original site under appropriate headers and pages. The mockups are a little unpolished but them being my first website redesign project, I'm happy with how they turned out.
+It was my first time creating a website mockup with Illustrator. For the main theme I picked a rainbow like palette of colors to display in the background. I restructured the information on the original site under appropriate headers and pages. The mockups are a little unpolished but them being my first website redesign project, I'm happy with how they turned out.
 
 You can view the mock up slides on [Flickr][FlickrColorMuseum]
 
