@@ -2,6 +2,8 @@
 layout: post
 title: The Color Experience Website Redesign
 date: 2015-09-30 14:01:00
+redirect_to:
+  - http://www.carlospwk.com
 ---
 
 Back in 2011 when I was studying at the School of Arts and New Media [(Scarborough, UoH)][SANM], one of my module assignments was to redesign the website for the Bradford Color Museum. The now [defunct website][ColorMuseum] was a wonderful array of questionable usability and design choices. Granted the website was very old and designed to serve as an "online experience" of sorts. 
