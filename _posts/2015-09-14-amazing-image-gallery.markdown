@@ -2,6 +2,8 @@
 layout: post
 title: "Amazing Image Gallery"
 date: 2015-09-14 12:18:00
+redirect_to:
+  - http://www.carlospwk.com
 ---
 
 It's ALIVE! For the past few weeks, I've been working on my JavaScript (jQuery) [Amazing Image Gallery][AIG], which displays four thumbnails and one single main photo. The basic functionality for local images was completed sometime ago, but today I released the Instagram version of my gallery. It fetches the four most recent photographs from [my Instagram][instagram_carlospwk] feed and displays them in the gallery. Developing AIG took a lot of trial and error, googling, green tea and help from my instructor, but it was absolutely worth it. Next, I plan on adding thumbnail scrolling and image preloading to the gallery. 
