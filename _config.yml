@@ -7,6 +7,8 @@ baseurl: "" # the subpath of your site, e.g. /blog/
 url: "http://capawaky.com" # the base hostname & protocol for your site
 paginate: 1
 #excerpt: 2
+plugins:
+  - jekyll-redirect-from
 
 
 # Build settings
