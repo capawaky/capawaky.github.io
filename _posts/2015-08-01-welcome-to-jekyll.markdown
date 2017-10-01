@@ -3,6 +3,8 @@ layout: post
 title:  "Hello and Welcome - First Post on Jekyll"
 date:   2015-09-06 21:30:00
 categories: 
+redirect_to:
+  - http://www.carlospwk.com
 ---
 
 This is my very first post using the [Jekyll][jekyll] blogging platform. I originally launched this site last spring but quickly realised updating it without any automation was going to be a major chore. Initially I was looking to use Wordpress, but Jekyll's approach of generating only static HTML pages, free hosting on GitHub and versatility made me change my mind. I also felt like I could learn more by creating everything from scratch instead of being tempted to use a free Wordpress template. Not that there aren't free Jekyll templates but I felt it was easier to create something from scratch using Jekyll rather than Wordpress.
