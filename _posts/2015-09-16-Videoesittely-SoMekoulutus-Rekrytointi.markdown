@@ -3,6 +3,8 @@ layout: post
 title:  "Videoesittely, SoMe-koulutus ja rekrytointi"
 date:   2015-09-16 10:13:00
 categories: carlosduuniin
+redirect_to:
+  - http://www.carlospwk.com
 ---
 
 Kävin pari viikkoa sitten [SoMe Studion][SoMeStudio] yhden päivän koulutuksessa, jossa käsiteltiin videoesittelyitä työnhaun välineenä ja oman osaamisen esilletuomisessa. Kävimme aluksi läpi teoriaa ja katsoimme valmiita esittelyitä, jonka jälkeen aloimme työstää omia videoitamme. Ideoin ryhmäläisteni kanssa, kirjoitin lyhyen käsikirjoituksen ja kuvasin videon läppärin kameralla. Latasimme videot ilmaiseen nettieditoriin ja lopulta laitoin [valmiin esittelyn YouTubeen][YTVideo]. Vaikka oma sisäinen ääneni kritisoi nopeasti toteutettua, hieman amatöörimäistä lopputulosta, kurssin ohjaaja [Maria Rajakallio][MariaTwitter] kehui videota ja liitti sen [SoMe Studion blogiin][SomeBlogiPostaus]. Maria suositteli myös luomaan oman hashtagin työnhakua varten ja päädyin #carlosduuniin tägiin. 
